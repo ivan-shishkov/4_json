@@ -48,7 +48,12 @@ def main():
     if not decoded_data:
         sys.exit('JSON file not found')
 
-    print(json.dumps(decoded_data, ensure_ascii=False, indent=indent_level))
+    print(json.dumps(
+        decoded_data,
+        ensure_ascii=False,
+        indent=indent_level,
+        sort_keys=True,
+    ))
 
 
 if __name__ == '__main__':

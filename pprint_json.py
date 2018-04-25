@@ -29,6 +29,13 @@ def parse_command_line_arguments():
         type=int,
     )
 
+    parser.add_argument(
+        '-s',
+        '--sort',
+        help='if set, then the output of dictionaries will be sorted by key',
+        action='store_true',
+    )
+
     command_line_arguments = parser.parse_args()
 
     return command_line_arguments
@@ -39,6 +46,7 @@ def main():
 
     filename = command_line_arguments.filename
     indent_level = command_line_arguments.indent
+    sort_keys = command_line_arguments.sort
 
     try:
         decoded_data = load_json_data(filename)
@@ -52,7 +60,7 @@ def main():
         decoded_data,
         ensure_ascii=False,
         indent=indent_level,
-        sort_keys=True,
+        sort_keys=sort_keys,
     ))
 
 

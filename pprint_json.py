@@ -24,7 +24,7 @@ def parse_command_line_arguments():
         '-i',
         '--indent',
         help='indent level for pretty printing of both JSON array elements '
-             'and object members',
+             'and object members (the default value is 4)',
         default=4,
         type=int,
     )

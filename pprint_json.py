@@ -46,7 +46,7 @@ def main():
 
     filename = command_line_arguments.filename
     indent_level = command_line_arguments.indent
-    sort_keys = command_line_arguments.sort
+    need_sorting_of_keys = command_line_arguments.sort
 
     try:
         decoded_data = load_json_data(filename)
@@ -60,7 +60,7 @@ def main():
         decoded_data,
         ensure_ascii=False,
         indent=indent_level,
-        sort_keys=sort_keys,
+        sort_keys=need_sorting_of_keys,
     ))
 
 

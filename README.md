@@ -1,10 +1,8 @@
 # Prettify JSON
 
-[TODO. There will be project description]
+This script allows to execute pretty-print of JSON file content to console.
 
 # Quickstart
-
-[TODO]
 
 Example of script launch on Linux, Python 3.5:
 
